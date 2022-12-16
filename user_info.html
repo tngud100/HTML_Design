@@ -9,22 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/user_info.css.css">
+    <link rel="stylesheet" href="css/user_info.css">
     <title>Picsell's web</title>
 </head>
 <body>
-    <style>
-        #info_section{
-            text-align: center;
-        }
-        #user_form{ 
-            font-size: 2em;
-            font-family: 'Ansungtangmyun-Bold';
-            margin-top: 5vh;
-            display: inline-block;
-        }
-        #wrap{background-color: white; border: 1 grey; border-radius: 10px 10px 10px 10px; width: 450px; height: 700px; margin: 5vh auto auto auto; box-shadow: 2px 5px 5px;}
-    </style>
     <header>
         <div>
             <span id ="logo">Picsell</span>
@@ -42,14 +30,20 @@
     </header>
     <section id="info_section">
         <div id="wrap">
+            
             <span id="user_form">사용자 정보</span><br>
-            사용자의 아이디<br>
-            <span id="id"></span><br>
-            현재 잔고<br>
-            <span id="Balance"></span><br>
-            등록한 상품 이름<br>
+            <hr>
+            <p>사용자 아이디</p>
+            <input class="form-control" type="text" value="id" aria-label="id" readonly style="width: 20vw; ;text-align: center; margin: auto auto auto auto;">
+            <span id="id"></span><hr>
+            
+            <p>현재 잔고</p>
+            <input class="form-control" type="text" value="Balance" aria-label="Balance" readonly style="width: 20vw; ;text-align: center; margin: auto auto auto auto;">
+            <span id="Balance"></span><hr>
+
+            <p>등록한 상품</p>
             <span id="enrolled_product"></span><br>
-            <div id ="product_img"></div>
+            <div id ="product_img"></div><hr>
         </div>
     </section>
 <body>

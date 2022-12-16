@@ -10,16 +10,36 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/user_info.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>Picsell's web</title>
 </head>
+
 <body>
+    <script>
+        $(function(){
+            $('#enroll_product').click(function(){
+                $('#product_main').hide();
+                $('.back_ignore').show()
+                $('#info_section').show().animate({
+                    top: '0'
+                });
+            });
+            $('.btn-close').click(function(){
+                $('#product_main').show();
+                $('.back_ignore').hide()
+                $('#info_section').animate({
+                    top:'-2000px'
+                });
+            });
+        });
+    </script>
     <header>
         <div>
             <span id ="logo">Picsell</span>
             <ul id ="menu_page">
                 <li id = "product"><a href="/product.html">상품구매</a></li>
-                <li id = "enroll_product"><a href="">상품등록</a></li>
                 <li id = "user_info"><a href="/user_info.html">사용자정보</a></li>
+                <li id = "enroll_product"><button id = "product_enroll_btn">상품등록</button></li>
             </ul>
         </div>
         <div>
@@ -45,8 +65,28 @@
                 <hr>
                 판매자
             </div>
-            
         </div>
     </section>
+    <section id="info_section" style="position:fixed;margin: auto; z-index: 50; top: -2000px; margin-top: 10vh; margin-left: 35%;">
+        <button type="button" class="btn-close" aria-label="Close" style="width: 50px; height: 50px;"></button>
+        <div id="wrap">
+            <span id="user_form">사용자 정보</span><br>
+            <hr>
+
+            <p>사용자 아이디</p>
+            <input class="form-control" type="text" value="id" aria-label="id" readonly style="width: 20vw; ;text-align: center; margin: auto auto auto auto;">
+            <span id="id"></span><hr>
+            
+            <p>현재 잔고</p>
+            <input class="form-control" type="text" value="Balance" aria-label="Balance" readonly style="width: 20vw; ;text-align: center; margin: auto auto auto auto;">
+            <span id="Balance"></span><hr>
+
+            <p>등록한 상품</p>
+            <span id="enrolled_product"></span><br>
+            <div id ="product_img"></div><hr>
+        </div>
+    </section>
+
+    <div class="back_ignore"></div>
 </body>
 </html>
