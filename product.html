@@ -34,13 +34,23 @@
         </div>
     </header>
 
-    <section id="product_main">
+    <section id="product_main" >
         <div id ="product_dash">
             <div id="title">
                 <span id ="select_title">select product</span>
                 <hr>
             </div>
-            <div id ="product_list1">
+            <div id ="product_list">
+                <img src="Picsell_image\cat-g0385aa8c5_1920.jpg" class="img-thumbnail" alt="cat_image" width="200px" height="200px">
+                <br>
+                그림 ID
+                <br>
+                그림의 가격
+                <br>
+                <hr>
+                판매자
+            </div>
+            <div id ="product_list" style="display: none">
                 <img src="Picsell_image\cat-g0385aa8c5_1920.jpg" class="img-thumbnail" alt="cat_image" width="200px" height="200px">
                 <br>
                 그림 ID
@@ -51,34 +61,34 @@
                 판매자
             </div>
         </div>
+        
     </section>
     <section id="enroll_form" style="position:fixed; z-index: 50; top: -2000px; margin-top: 5vh; left: 50%;text-align: center; transform: translate(-50%, 0);">
-        <button type="button" class="btn-close" aria-label="Close" style="width: 50px; height: 50px;"></button>
+        <button type="button" class="btn-close" aria-label="Close"></button>
         <div id="wrap_product">
             <span id="title_product">상품 등록</span><br>
             <hr>
 
             <p>등록하실 상품의 ID</p>
-            <input class="form-control" type="text" value="img_id" aria-label="id" readonly style="width: 40%; text-align: center; margin: auto;">
-            <span id="img_id"></span><hr>
+            <input class="form-control" type="text" placeholder="img_id" id="img_id" style="width: 40%; text-align: center; margin: auto;">
+            <hr>
             
             <p>상품의 가격</p>
-            <input class="form-control" type="text" value="img_Balance" aria-label="Balance" readonly style="width: 40%; ;text-align: center; margin: auto;">
-            <span id="img_Balance"></span><hr>
-
-            <p>등록하실 그림</p>
+            <input class="form-control" type="text" placeholder="img_Balance" id="img_Balance" style="width: 40%; ;text-align: center; margin: auto;">
+            <hr>
+            
+            <p>상품 등록하기</p>
             
             <div class="input-group mb-3" style="width: 80%; margin: auto;">
-                <input type="file" class="form-control" id="inputGroupFile02" width="">
+                <input type="file" class="form-control" id="inputGroupFile02" onchange="set_change_img()">
                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
             </div>
 
-            <div id ="product_img" img src="..." style="width:50%; height:20%; margin: auto;"></div>
-
-            <button type="button" class="btn btn-success" style="margin:auto; width:120px;">submit</button>
+            <img src="..." id ="product_img" alt="이미지를 등록하세요" style="width:50%; height:20%; margin: auto;">
+            <br>
+            <button type="button" class="btn btn-success" style="margin: 2vh auto; width:120px;">submit</button>
         </div>
     </section>
-
     <div class="back_ignore"></div>
 </body>
 </html>
